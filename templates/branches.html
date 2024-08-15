@@ -1,0 +1,45 @@
+{% extends 'layout.html' %}
+
+<!--Template displays information in three main blocks-->
+{% block content %}
+    <div class="center">
+        <body>
+            <h1><a href={{url}}>Official {{pagename}} Website</a></h1>
+            <img src="{{url_for('static', filename=image)}}">
+            <div class={{style}}>
+                <h2>ESTABLISHED</h2>
+                <p>{{estab_date}}</p>
+            </div>
+            <div class={{style}}>
+                <h2>CORE VALUES</h2>
+                <ol type="1">
+                    {% for value, description in values.items() %}
+                        <h3><li>{{value}}</li></h3>
+                        <p>{{description}}</p>
+                    {% endfor %}
+                </ol>
+            </div>
+            <div class={{style}}>
+                <h2>RANKS</h2>
+                {% for class, rank in ranks.items() %}
+                    <table>
+                        <h3>{{class}}</h3>
+                        <tr>
+                            <th>Grade</th>
+                            <th>Name</th>
+                            <th>Abbreviation</th>
+                        </tr>
+                        {% for grade, names in rank.items() %}
+                            <tr>
+                                <td width="75px">{{grade}}</td>
+                                {% for name in names %}
+                                    <td  width="225px">{{name}}</td>
+                                {% endfor %}
+                            </tr>
+                        {% endfor %}
+                    {% endfor %}
+                </table>
+            </div>
+        </body>
+    </div>
+{% endblock %}

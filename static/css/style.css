@@ -1,0 +1,151 @@
+/* styles.css */
+
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background: linear-gradient(to bottom right, #6a11cb, #2575fc);
+    /*display: flex;*/
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+/* Container for the page content */
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+
+
+/* Header styles */
+/* Style for the header */
+header {
+    padding: 20px;
+    color: white;
+    animation: colorChange 10s infinite; /* Apply the color change animation */
+}
+
+/* Define the color-changing animation */
+@keyframes colorChange {
+    0% {
+        background-color: #6a11cb; /* Start color */
+    }
+    25% {
+        background-color: #2575fc; /* 1st transition */
+    }
+    50% {
+        background-color: #000000; /* 2nd transition */
+    }
+    75% {
+        background-color: #2575fc; /* 3rd transition */
+    }
+    100% {
+        background-color: #6a11cb; /* Back to start color */
+    }
+}
+
+/* Style for the nav links */
+header nav a {
+    color: white; /* Initial text color */
+    text-decoration: none;
+    padding: 10px 5px;
+    transition: background-color 0.5s ease, color 0.5s ease; /* Smooth transition for both background color and text color */
+}
+
+/* Hover effect for nav links */
+header nav a:hover {
+    background-color: #2420ff; /* Background color shift on hover */
+    color: white; /* Text color on hover (remains white) */
+}
+
+/* Optional: Style for the header text */
+header h1 {
+    color: white;
+    margin-top: 10px;
+}
+
+
+/* Main content area */
+main {
+    padding: 20px;
+    background: #fff;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+/* Form styles */
+form {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="submit"],
+form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form input[type="submit"],
+form button {
+    background: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover,
+form button:hover {
+    background: #555;
+}
+
+/* Flash messages */
+.flash {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.flash-success {
+    background: #d4edda;
+    color: #155724;
+}
+
+.flash-error {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+/* Footer styles */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}

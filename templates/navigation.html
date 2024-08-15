@@ -1,0 +1,14 @@
+<header class={{style}}>
+    <nav>
+        <a href="/">Home</a>|
+        {% if authenticated == True %}
+            <a href="/logout/">Logout</a>|
+            <a href="/passwordupdate/">Change Password</a>
+        {% else %}
+            <a href="/login/">Login</a>|
+            <a href="/register/">Register</a>|
+            <a href="/passwordupdate/">Change Password</a>
+        {% endif %}
+    </nav>
+    <h1>{{pagename}}</h1>
+</header>
