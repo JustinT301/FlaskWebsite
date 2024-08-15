@@ -5,7 +5,6 @@
 2. [Dependencies](#dependencies)
 3. [Installation](#installation)
 4. [How to Use](#how-to-use)
-5. [Credits](#credits)
 
 ## Introduction
 Python Flask Website with authentication and change password option
@@ -61,8 +60,3 @@ Python Flask Website with authentication and change password option
    ```
 2. Input http://127.0.0.1:5000/ into browser
 
-
-## Credits
-* Developed by:
-   * Justin Turbyfill
-* Date: August 15th, 2024
