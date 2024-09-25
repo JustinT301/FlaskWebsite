@@ -1,4 +1,4 @@
-# Clash Royale Automation Bot
+# Flask Website
 
 ## Table of Contents
 1. [Introdution](#introduction)
